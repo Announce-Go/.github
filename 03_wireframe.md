@@ -1,8 +1,83 @@
 # 화면 설계서
 
-## 1. 공통 화면
+## 1. 화면 목록
 
-### 1.1 로그인 화면
+### 1.1 공통 화면
+
+| 화면명 | 경로 | 설명 |
+|--------|------|------|
+| 로그인 | `/login` | 모든 사용자 공통 로그인 |
+| 회원가입 | `/signup` | 업체/광고주 회원가입 (타입 선택) |
+
+### 1.2 관리자 화면
+
+| 화면명 | 경로 | 설명 |
+|--------|------|------|
+| 대시보드 | `/admin/dashboard` | 관리자 메인 화면 (승인대기, 통계) |
+| 회원가입 승인 목록 | `/admin/signup-requests` | 업체/광고주 가입 요청 목록 |
+| 회원가입 승인 상세 | `/admin/signup-requests/:id` | 가입 상세 및 승인/거절, 매핑 설정 |
+| 업체 목록 | `/admin/agencies` | 업체 정보 관리 |
+| 업체 상세 | `/admin/agencies/:id` | 업체 상세 및 매핑된 광고주 목록 |
+| 광고주 목록 | `/admin/advertisers` | 광고주 정보 관리 |
+| 광고주 상세 | `/admin/advertisers/:id` | 광고주 상세 및 매핑된 업체 목록 |
+| 플레이스 실시간 순위 조회 (건바이건) | `/admin/place-rank/realtime` | 플레이스 실시간 순위 조회 |
+| 플레이스 순위 추적 목록 (월보장) | `/admin/place-rank/tracking` | **전체** 플레이스 추적 목록 조회 |
+| 플레이스 순위 추적 상세 | `/admin/place-rank/tracking/:id` | 일별 순위 히스토리 조회 |
+| 카페 글 실시간 순위 조회 (건바이건) | `/admin/cafe-rank/realtime` | 카페 글 실시간 순위 조회 |
+| 카페 글 순위 추적 목록 (월보장) | `/admin/cafe-rank/tracking` | **전체** 카페 글 추적 목록 조회 |
+| 카페 글 순위 추적 상세 | `/admin/cafe-rank/tracking/:id` | 일별 순위 히스토리 조회 |
+| 블로그 글 실시간 순위 조회 (건바이건) | `/admin/blog-rank/realtime` | 블로그 글 실시간 순위 조회 |
+| 블로그 글 순위 추적 목록 (월보장) | `/admin/blog-rank/tracking` | **전체** 블로그 글 추적 목록 조회 |
+| 블로그 글 순위 추적 상세 | `/admin/blog-rank/tracking/:id` | 일별 순위 히스토리 조회 |
+| 블로그 포스팅 목록 (브랜드 블로그) | `/admin/blog-posting` | **전체** 브랜드 블로그 포스팅 목록 조회 |
+| 블로그 포스팅 상세 | `/admin/blog-posting/:id` | 포스팅 상세 조회 |
+| 언론 기사 목록 | `/admin/news-articles` | **전체** 언론 기사 목록 |
+| 언론 기사 등록/수정 | `/admin/news-articles/new`, `/admin/news-articles/:id` | 언론 기사 CRUD |
+| 카페 침투 목록 | `/admin/cafe-infiltration` | **전체** 카페 침투 목록 |
+| 카페 침투 등록/수정 | `/admin/cafe-infiltration/new`, `/admin/cafe-infiltration/:id` | 카페 침투 CRUD |
+
+### 1.3 업체 화면
+
+| 화면명 | 경로 | 설명 |
+|--------|------|------|
+| 대시보드 | `/agency/dashboard` | 업체 메인 화면 (카테고리별 현황) |
+| 플레이스 실시간 순위 조회 (건바이건) | `/agency/place-rank/realtime` | 플레이스 실시간 순위 조회 |
+| 플레이스 순위 추적 목록 (월보장) | `/agency/place-rank/tracking` | **본인 등록** 플레이스 추적 목록 |
+| 플레이스 순위 추적 등록 | `/agency/place-rank/tracking/new` | 새 플레이스 순위 추적 등록 |
+| 플레이스 순위 추적 상세 | `/agency/place-rank/tracking/:id` | 일별 순위 히스토리 조회 |
+| 카페 글 실시간 순위 조회 (건바이건) | `/agency/cafe-rank/realtime` | 카페 글 실시간 순위 조회 |
+| 카페 글 순위 추적 목록 (월보장) | `/agency/cafe-rank/tracking` | **본인 등록** 카페 글 추적 목록 |
+| 카페 글 순위 추적 등록 | `/agency/cafe-rank/tracking/new` | 새 카페 글 순위 추적 등록 |
+| 카페 글 순위 추적 상세 | `/agency/cafe-rank/tracking/:id` | 일별 순위 히스토리 조회 |
+| 블로그 글 실시간 순위 조회 (건바이건) | `/agency/blog-rank/realtime` | 블로그 글 실시간 순위 조회 |
+| 블로그 글 순위 추적 목록 (월보장) | `/agency/blog-rank/tracking` | **본인 등록** 블로그 글 추적 목록 |
+| 블로그 글 순위 추적 등록 | `/agency/blog-rank/tracking/new` | 새 블로그 글 순위 추적 등록 |
+| 블로그 글 순위 추적 상세 | `/agency/blog-rank/tracking/:id` | 일별 순위 히스토리 조회 |
+| 블로그 포스팅 기록 목록 (브랜드 블로그) | `/agency/blog-posting` | **본인 등록** 브랜드 블로그 포스팅 목록 |
+| 블로그 포스팅 기록 등록/수정 | `/agency/blog-posting/new`, `/agency/blog-posting/:id` | 포스팅 기록 CRUD |
+| 언론 기사 목록 | `/agency/news-articles` | **본인 매핑 광고주** 언론 기사 조회 |
+| 카페 침투 목록 | `/agency/cafe-infiltration` | **본인 매핑 광고주** 카페 침투 조회 |
+
+### 1.4 광고주 화면 (열람 전용)
+
+| 화면명 | 경로 | 설명 |
+|--------|------|------|
+| 대시보드 | `/advertiser/dashboard` | 광고주 메인 화면 (매핑된 데이터 요약) |
+| 플레이스 순위 추적 목록 (월보장) | `/advertiser/place-rank/tracking` | **본인 매핑** 플레이스 순위 목록 |
+| 플레이스 순위 상세 | `/advertiser/place-rank/tracking/:id` | 일별 순위 히스토리 |
+| 카페 글 순위 추적 목록 (월보장) | `/advertiser/cafe-rank/tracking` | **본인 매핑** 카페 글 순위 목록 |
+| 카페 글 순위 상세 | `/advertiser/cafe-rank/tracking/:id` | 일별 순위 히스토리 |
+| 블로그 글 순위 추적 목록 (월보장) | `/advertiser/blog-rank/tracking` | **본인 매핑** 블로그 글 순위 목록 |
+| 블로그 글 순위 상세 | `/advertiser/blog-rank/tracking/:id` | 일별 순위 히스토리 |
+| 블로그 포스팅 목록 (브랜드 블로그) | `/advertiser/blog-posting` | **본인 매핑** 포스팅 목록 |
+| 언론 기사 목록 | `/advertiser/news-articles` | **본인 매핑** 언론 기사 |
+| 카페 침투 목록 | `/advertiser/cafe-infiltration` | **본인 매핑** 카페 침투 |
+
+---
+
+## 2. 공통 화면 상세
+
+### 2.1 로그인 화면
 - **경로**: `/login`
 
 #### 레이아웃
@@ -42,7 +117,7 @@
 
 ---
 
-### 1.2 회원가입 화면
+### 2.2 회원가입 화면
 - **경로**: `/register`
 
 #### 레이아웃
@@ -133,9 +208,9 @@
 
 ---
 
-## 2. 관리자 화면
+## 3. 관리자 화면 상세
 
-### 2.1 관리자 대시보드
+### 3.1 관리자 대시보드
 - **경로**: `/admin/dashboard`
 
 #### 레이아웃
@@ -170,7 +245,7 @@
 
 ---
 
-### 2.2 회원가입 승인 관리
+### 3.2 회원가입 승인 관리
 - **경로**: `/admin/approvals`
 
 #### 레이아웃
@@ -204,7 +279,7 @@
 
 ---
 
-### 2.3 회원가입 승인 상세 (모달)
+### 3.3 회원가입 승인 상세 (모달)
 - **경로**: 모달 팝업
 
 #### 레이아웃
@@ -240,7 +315,7 @@
 
 ---
 
-### 2.4 병원 목록 관리
+### 3.4 병원 목록 관리
 - **경로**: `/admin/hospitals`
 
 #### 레이아웃
@@ -273,7 +348,7 @@
 
 ---
 
-### 2.5 병원 상세
+### 3.5 병원 상세
 - **경로**: `/admin/hospitals/:id`
 
 #### 레이아웃
@@ -319,7 +394,7 @@
 
 ---
 
-### 2.6 광고업체 목록 관리
+### 3.6 광고업체 목록 관리
 - **경로**: `/admin/agencies`
 
 #### 레이아웃
@@ -352,7 +427,7 @@
 
 ---
 
-### 2.7 리포트 관리
+### 3.7 리포트 관리
 - **경로**: `/admin/reports`
 
 #### 레이아웃
@@ -387,7 +462,7 @@
 
 ---
 
-### 2.8 리포트 생성/편집
+### 3.8 리포트 생성/편집
 - **경로**: `/admin/reports/new`, `/admin/reports/:id`
 
 #### 레이아웃
@@ -479,9 +554,9 @@
 
 ---
 
-## 3. 광고업체 화면
+## 4. 업체 화면 상세
 
-### 3.1 광고업체 대시보드
+### 4.1 업체 대시보드
 - **경로**: `/agency/dashboard`
 
 #### 레이아웃
@@ -520,7 +595,7 @@
 
 ---
 
-### 3.2 블로그 상위 노출 - 회차 목록
+### 4.2 블로그 상위 노출 - 회차 목록
 - **경로**: `/agency/marketing/blog-top`
 
 #### 레이아웃
@@ -555,7 +630,7 @@
 
 ---
 
-### 3.3 블로그 상위 노출 - 회차 생성
+### 4.3 블로그 상위 노출 - 회차 생성
 - **경로**: `/agency/marketing/blog-top/new`
 
 #### 레이아웃
@@ -603,7 +678,7 @@
 
 ---
 
-### 3.4 블로그 상위 노출 - 순위 입력
+### 4.4 블로그 상위 노출 - 순위 입력
 - **경로**: `/agency/marketing/blog-top/:roundId`
 
 #### 레이아웃
@@ -660,7 +735,7 @@
 
 ---
 
-### 3.5 브랜드 블로그 관리
+### 4.5 브랜드 블로그 관리
 - **경로**: `/agency/marketing/brand-blog`
 
 #### 레이아웃
@@ -725,7 +800,7 @@
 
 ---
 
-### 3.6 카페 관리
+### 4.6 카페 관리
 - **경로**: `/agency/marketing/cafe`
 
 #### 레이아웃
@@ -777,7 +852,7 @@
 
 ---
 
-### 3.7 영수증 블로그 관리
+### 4.7 영수증 블로그 관리
 - **경로**: `/agency/marketing/receipt-blog`
 
 #### 레이아웃
@@ -829,9 +904,9 @@
 
 ---
 
-## 4. 병원 화면
+## 5. 광고주 화면 상세
 
-### 4.1 병원 대시보드
+### 5.1 광고주 대시보드
 - **경로**: `/hospital/dashboard`
 
 #### 레이아웃
@@ -867,7 +942,7 @@
 
 ---
 
-### 4.2 블로그 상위 노출 현황
+### 5.2 블로그 상위 노출 현황
 - **경로**: `/hospital/marketing-status/blog-top`
 
 #### 레이아웃
@@ -913,7 +988,7 @@
 
 ---
 
-### 4.3 브랜드 블로그 현황
+### 5.3 브랜드 블로그 현황
 - **경로**: `/hospital/marketing-status/brand-blog`
 
 #### 레이아웃
@@ -948,7 +1023,7 @@
 
 ---
 
-### 4.4 카페 현황
+### 5.4 카페 현황
 - **경로**: `/hospital/marketing-status/cafe`
 
 #### 레이아웃
@@ -985,7 +1060,7 @@
 
 ---
 
-### 4.5 영수증 블로그 현황
+### 5.5 영수증 블로그 현황
 - **경로**: `/hospital/marketing-status/receipt-blog`
 
 #### 레이아웃
@@ -1022,7 +1097,7 @@
 
 ---
 
-### 4.6 리포트 조회
+### 5.6 리포트 조회
 - **경로**: `/hospital/reports`
 
 #### 레이아웃
@@ -1055,7 +1130,7 @@
 
 ---
 
-### 4.7 리포트 상세
+### 5.7 리포트 상세
 - **경로**: `/hospital/reports/:id`
 
 #### 레이아웃
@@ -1131,56 +1206,6 @@
 - 리포트 상세 조회 API 호출
   - 요청: 리포트ID
   - 응답: 리포트정보 (네이버광고, 파워컨텐츠, 블로그상위노출, 카페상위노출, 블로그배포, 심의유효기간)
-
----
-
-## 5. 화면 목록
-
-### 5.1 공통 화면
-
-| 화면명 | 경로 | 설명 |
-|--------|------|------|
-| 로그인 | `/login` | 모든 사용자 공통 로그인 |
-| 회원가입 | `/register` | 광고업체/병원 회원가입 |
-
-### 5.2 관리자 화면
-
-| 화면명 | 경로 | 설명 |
-|--------|------|------|
-| 대시보드 | `/admin/dashboard` | 관리자 메인 화면 |
-| 회원가입 승인 관리 | `/admin/approvals` | 가입 승인/반려 처리 |
-| 병원 목록 | `/admin/hospitals` | 병원 정보 관리 |
-| 병원 상세 | `/admin/hospitals/:id` | 병원 상세 정보 및 마케팅 현황 |
-| 광고업체 목록 | `/admin/agencies` | 광고업체 정보 관리 |
-| 리포트 관리 | `/admin/reports` | 병원별 리포트 목록 |
-| 리포트 생성/편집 | `/admin/reports/new`, `/admin/reports/:id` | 리포트 작성 및 발행 |
-| 문의 관리 | `/admin/inquiries` | 1:1 문의 관리 |
-
-### 5.3 광고업체 화면
-
-| 화면명 | 경로 | 설명 |
-|--------|------|------|
-| 대시보드 | `/agency/dashboard` | 광고업체 메인 화면 |
-| 블로그 상위 - 회차 목록 | `/agency/marketing/blog-top` | 회차 관리 |
-| 블로그 상위 - 회차 생성 | `/agency/marketing/blog-top/new` | 새 회차 시작 |
-| 블로그 상위 - 순위 입력 | `/agency/marketing/blog-top/:roundId` | 일별 순위 입력 |
-| 브랜드 블로그 관리 | `/agency/marketing/brand-blog` | 키워드-URL 관리 |
-| 카페 관리 | `/agency/marketing/cafe` | 카페 일정 및 계약 관리 |
-| 영수증 블로그 관리 | `/agency/marketing/receipt-blog` | 영수증 일정 및 계약 관리 |
-| 문의 목록 | `/agency/inquiries` | 1:1 문의 |
-
-### 5.4 병원 화면
-
-| 화면명 | 경로 | 설명 |
-|--------|------|------|
-| 대시보드 | `/hospital/dashboard` | 병원 메인 화면 |
-| 블로그 상위 현황 | `/hospital/marketing-status/blog-top` | 순위 현황 조회 |
-| 브랜드 블로그 현황 | `/hospital/marketing-status/brand-blog` | 키워드 현황 조회 |
-| 카페 현황 | `/hospital/marketing-status/cafe` | 카페 활동 조회 |
-| 영수증 블로그 현황 | `/hospital/marketing-status/receipt-blog` | 영수증 활동 조회 |
-| 리포트 목록 | `/hospital/reports` | 리포트 목록 |
-| 리포트 상세 | `/hospital/reports/:id` | 리포트 상세 조회 |
-| 문의 목록 | `/hospital/inquiries` | 1:1 문의 |
 
 ---
 
