@@ -42,8 +42,8 @@
 ## 📚 문서
 
 - [요구사항 정의서](01_requirement.md) - 시스템 요구사항 및 기능 명세
-- [시스템 설계서](02_architecture.md) - 기술 스택 및 아키텍처 다이어그램
-- [화면 설계서](03_wireframe.md) - UI/UX 설계 및 화면 구성, API 목록
-- [진행중인 질문](04_questions_pending.md) - 요구사항 관련 미해결 질문
+- [시스템 설계서](04_architecture) - 기술 스택 및 아키텍처 다이어그램
+- [화면 설계서](02_wireframe) - UI/UX 설계 및 화면 구성, API 목록
+- [진행중인 질문](99_questions_pending) - 요구사항 관련 미해결 질문
 - [해결된 질문](99_questions_resolved.md) - 답변 완료된 질문 아카이브
 - [프로젝트 예산서](99_budget.md) - 개발 비용 및 서버 운영 비용
